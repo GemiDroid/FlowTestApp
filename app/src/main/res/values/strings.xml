@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TestFlow</string>
+    <string name="generic_error">General Error</string>
+    <string name="movies">Movies</string>
+</resources>

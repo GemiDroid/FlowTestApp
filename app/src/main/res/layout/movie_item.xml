@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivArticle"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_width="@dimen/img_width"
+        android:layout_height="@dimen/img_height"
+        android:layout_marginEnd="@dimen/margin_10"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/barrierContent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvArticleTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/font_15"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/barrierNavigate"
+        app:layout_constraintStart_toEndOf="@id/barrierContent"
+        app:layout_constraintTop_toTopOf="@id/ivArticle"
+        tool:text="@string/appbar_scrolling_view_behavior" />
+
+    <TextView
+        android:id="@+id/tvArticleDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:ellipsize="end"
+        android:lines="2"
+        android:textColor="@color/white_grey"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintBottom_toBottomOf="@id/ivArticle"
+        app:layout_constraintEnd_toStartOf="@id/ivDate"
+        app:layout_constraintStart_toEndOf="@id/barrierContent"
+        app:layout_constraintTop_toBottomOf="@id/tvArticleTitle"
+        tool:text="@string/appbar_scrolling_view_behavior" />
+
+    <ImageView
+        android:id="@+id/ivArticleNavigate"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_navigate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="1"
+        tool:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/ivDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_calendar"
+        app:layout_constraintBottom_toBottomOf="@id/tvDate"
+        app:layout_constraintEnd_toStartOf="@id/tvDate"
+        app:layout_constraintStart_toEndOf="@id/tvArticleDescription" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_5"
+        app:layout_constraintStart_toEndOf="@id/ivDate"
+        android:textColor="@color/white_grey"
+        app:layout_constraintBottom_toBottomOf="@id/tvArticleDescription"
+        app:layout_constraintEnd_toStartOf="@id/barrierNavigate"
+        tool:text="2020-15-06" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="tvArticleTitle,tvArticleDescription"
+        app:layout_constraintEnd_toStartOf="@id/ivArticle" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierNavigate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="ivArticleNavigate" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/ivArticle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@color/white_grey"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

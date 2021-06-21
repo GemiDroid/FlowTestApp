@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="font_17">17sp</dimen>
+    <dimen name="img_width">75dp</dimen>
+    <dimen name="img_height">75dp</dimen>
+    <dimen name="margin_1">1dp</dimen>
+    <dimen name="font_15">15sp</dimen>
+    <dimen name="font_14">14sp</dimen>
+</resources>
