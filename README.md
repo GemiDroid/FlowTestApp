@@ -1,6 +1,6 @@
 # FlowTestApp
 
-### Implementing Movie.
+### Implementing Movie App.
 
 #### Technologies and architecture used:
 1- Kotlin.</br>
