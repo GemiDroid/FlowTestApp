@@ -22,7 +22,7 @@ class MoviesAdapter(private val movies: List<Movie>, private val onItemClick: (M
 
         val movie = movies[position]
         holder.itemView.apply {
-            Glide.with(context).load(movie.mediaList[0].mediaUrl[2].url).into(ivArticle)
+            Glide.with(context).load(movie.mediaList?.get(0)?.mediaUrl?.get(2)?.url).into(ivArticle)
             tvArticleTitle.text = movie.title
             tvArticleDescription.text = movie.details
             tvDate.text = movie.publishDate

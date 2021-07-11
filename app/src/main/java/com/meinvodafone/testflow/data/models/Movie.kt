@@ -8,7 +8,7 @@ data class Movie(
     @SerializedName("abstract")
     var details: String?="",
     @SerializedName("media")
-    var mediaList: List<MediaMetaData> = emptyList(),
+    var mediaList: List<MediaMetaData>? = emptyList(),
     @SerializedName("published_date")
     var publishDate: String
 )
